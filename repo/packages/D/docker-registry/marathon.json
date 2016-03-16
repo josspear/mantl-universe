@@ -1,0 +1,22 @@
+{
+    "id": "{{docker-registry.name}}",
+    "cpus": {{docker-registry.worker.cpu}},
+    "mem": {{docker-registry.worker.ram}},
+    "instances": {{docker-registry.worker.instances}},
+    "container": {
+        "docker": {
+            "image": "{{docker-registry.worker.image}}"
+        },
+        "type": "DOCKER"
+    },
+    "env": {
+        "SETTINGS_FLAVOR": "local",
+        "STORAGE_PATH": "/docker_storage"
+    },
+    "constraints": [
+        [
+            "hostname",
+            "UNIQUE"
+        ]
+    ]
+}

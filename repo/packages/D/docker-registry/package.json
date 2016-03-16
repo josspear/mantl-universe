@@ -1,0 +1,8 @@
+{
+  "name": "docker-registry",
+  "version": "2.3.1",
+  "tags": ["mantl", "mesos", "framework", "docker-registry", "docker", "docker"],
+  "framework": true,
+  "maintainer": "josspear@cisco.com",
+  "description": "Mantl implementation of Docker Registry"
+}

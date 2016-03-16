@@ -1,0 +1,58 @@
+{
+  "properties":{
+    "docker-registry":{
+      "depscription":"Docker Registry specific configuration properties",
+      "properties":{
+        "name":{
+          "default":"private-registry",
+          "description":"The framework name.",
+          "type":"string"
+        }
+        "force-pull-image":{
+          "default":false,
+          "description":"Forces docker to re-pull the image.",
+          "type":"boolean"
+        },
+        "worker":{
+          "properties":{
+            "cpu":{
+              "default":"0.2",
+              "description":"The amount of CPU that Mesos shall allocate to the registry.",
+              "type":"string"
+            },
+            "ram":{
+              "default":"512",
+              "description":"The amount of RAM that Mesos shall allocate to the registry.",
+              "type":"string"
+            },
+            "image":{
+              "default":"registry:2.3.1",
+              "description":"The docker registry image to use.",
+              "type":"string"
+            },
+            "instances":{
+              "default":"1",
+              "description":"The number of registry instances.",
+              "type":"string"
+            }
+          },
+          "required":[
+            "cpu",
+            "ram",
+            "image",
+            "instances"
+          ],
+          "type":"object"
+        }
+      },
+      "required":[
+        "name",
+        "worker"
+      ],
+      "type":"object"
+    }
+  },
+  "required":[
+    "docker-registry"
+  ]
+}
