@@ -1,11 +1,11 @@
 {
-    "id": "{{docker-registry.name}}",
-    "cpus": {{docker-registry.worker.cpu}},
-    "mem": {{docker-registry.worker.ram}},
-    "instances": {{docker-registry.worker.instances}},
+    "id": "dreg",
+    "cpus": 1,
+    "mem": 512,
+    "instances": 1,
     "container": {
         "docker": {
-            "image": "{{docker-registry.worker.image}}"
+            "image": "registry:2.3.1"
         },
         "type": "DOCKER"
     },
