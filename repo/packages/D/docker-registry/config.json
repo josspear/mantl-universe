@@ -7,7 +7,7 @@
           "default":"private-registry",
           "description":"The framework name.",
           "type":"string"
-        }
+        },
         "force-pull-image":{
           "default":false,
           "description":"Forces docker to re-pull the image.",
